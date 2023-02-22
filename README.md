@@ -1,22 +1,124 @@
-# Compilers
+# AASP Compilers
 <a href="https://www.producthunt.com/posts/judge0-ide" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=179885&theme=light" alt="" height="43px" /></a>
 <a href="https://patreon.com/hermanzdosilovic" target="_blank"><img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" alt="" height="43px" /></a>
 <a href="https://paypal.me/hermanzdosilovic" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donate with PayPal" height="43px" /></a>
 
 ## About
-This is a Docker image with installed compilers, interpreters, and [sandbox](https://github.com/ioi/isolate). It is used as a base image for [Judge0](https://github.com/judge0/judge0).
+This is a Docker image with installed compilers, interpreters, and [sandbox](https://github.com/ioi/isolate). It is used as a base image for [Judge0](https://github.com/chongyih/aasp-judge0). This repo is meant for [Judge0 AASP](https://github.com/chongyih/aasp-judge0), where the languages supported is curated specifically for NTU SCSE curriculumn.
 
 ## Get Started
-Start with the [**FREE Basic Plan**](https://rapidapi.com/hermanzdosilovic/api/judge0/pricing) on RapidAPI or [host it yourself](https://github.com/judge0/judge0/blob/master/CHANGELOG.md#deployment-procedure).
-
-### Why should you use Judge0 on RapidAPI?
-Our infrastructure behind RapidAPI allows you to focus on building your product and forget about the know-how of maintaining and scaling Judge0.
-
-### RapidAPI plans are not (good) enough for you?
-Let's talk. [Contact us](mailto:hermanz.dosilovic@gmail.com).
+1. Modify the Dockerfile in the aasp subfolder to add or remove any supported languages. 
+2. Build the Dockerfile.
+3. Push the new image to Docker Hub.
 
 ## Supported Languages
-Judge0 comes in two flavors: [Judge0](https://rapidapi.com/hermanzdosilovic/api/judge0/pricing) and [Judge0 Extra](https://rapidapi.com/hermanzdosilovic/api/judge0-extra/pricing). They differ mostly in the supported languages.
+Judge0 comes in three flavors: [Judge0](https://rapidapi.com/hermanzdosilovic/api/judge0/pricing), [Judge0 Extra](https://rapidapi.com/hermanzdosilovic/api/judge0-extra/pricing) and [Judge0 AASP](https://github.com/chongyih/aasp-judge0). They differ mostly in the supported languages.
+
+### [Judge0 AASP](https://github.com/chongyih/aasp-judge0)
+<details><summary>Click here to expand the list</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">#</th>
+<th style="text-align:center">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Assembly (NASM 2.14.02)</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Bash (5.0.0)</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">C (Clang 7.0.1)</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">C (GCC 7.4.0)</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">C (GCC 8.3.0)</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">C (GCC 9.2.0)</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">C++ (Clang 7.0.1)</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">C++ (GCC 7.4.0)</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">C++ (GCC 8.3.0)</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">C++ (GCC 9.2.0)</td>
+</tr>
+<tr>
+<td style="text-align:center">11</td>
+<td style="text-align:center">Executable</td>
+</tr>
+<tr>
+<td style="text-align:center">12</td>
+<td style="text-align:center">Java (OpenJDK 13.0.1)</td>
+</tr>
+<tr>
+<td style="text-align:center">13</td>
+<td style="text-align:center">JavaScript (Node.js 12.14.0)</td>
+</tr>
+<tr>
+<td style="text-align:center">14</td>
+<td style="text-align:center">Objective-C (Clang 7.0.1)</td>
+</tr>
+<tr>
+<td style="text-align:center">15</td>
+<td style="text-align:center">PHP (7.4.1)</td>
+</tr>
+<tr>
+<td style="text-align:center">16</td>
+<td style="text-align:center">Plain Text</td>
+</tr>
+<tr>
+<td style="text-align:center">17</td>
+<td style="text-align:center">Python (2.7.17)</td>
+</tr>
+<tr>
+<td style="text-align:center">18</td>
+<td style="text-align:center">Python (3.8.1)</td>
+</tr>
+<tr>
+<td style="text-align:center">19</td>
+<td style="text-align:center">R (4.0.0)</td>
+</tr>
+<tr>
+<td style="text-align:center">20</td>
+<td style="text-align:center">Ruby (2.7.0)</td>
+</tr>
+<tr>
+<td style="text-align:center">21</td>
+<td style="text-align:center">SQL (SQLite 3.27.2)</td>
+</tr>
+<tr>
+<td style="text-align:center">22</td>
+<td style="text-align:center">TypeScript (3.7.4)</td>
+</tr>
+<tr>
+<td style="text-align:center">23</td>
+<td style="text-align:center">Verilog (iVerilog 11.0.0)</td>
+</tr>
+</tbody>
+</table>
+</details>
 
 ### [Judge0](https://rapidapi.com/hermanzdosilovic/api/judge0/pricing)
 <details><summary>Click here to expand the list</summary>
