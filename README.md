@@ -1,20 +1,25 @@
 # AASP Compilers
+
 <a href="https://www.producthunt.com/posts/judge0-ide" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=179885&theme=light" alt="" height="43px" /></a>
 <a href="https://patreon.com/hermanzdosilovic" target="_blank"><img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" alt="" height="43px" /></a>
 <a href="https://paypal.me/hermanzdosilovic" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donate with PayPal" height="43px" /></a>
 
 ## About
+
 This is a Docker image with installed compilers, interpreters, and [sandbox](https://github.com/ioi/isolate). It is used as a base image for [Judge0](https://github.com/chongyih/aasp-judge0). This repo is meant for [Judge0 AASP](https://github.com/chongyih/aasp-judge0), where the languages supported is curated specifically for NTU SCSE curriculumn.
 
 ## Get Started
-1. Modify the Dockerfile in the aasp subfolder to add or remove any supported languages. 
+
+1. Modify the Dockerfile in the aasp subfolder to add or remove any supported languages.
 2. Build the Dockerfile.
 3. Push the new image to Docker Hub.
 
 ## Supported Languages
+
 Judge0 comes in three flavors: [Judge0](https://rapidapi.com/hermanzdosilovic/api/judge0/pricing), [Judge0 Extra](https://rapidapi.com/hermanzdosilovic/api/judge0-extra/pricing) and [Judge0 AASP](https://github.com/chongyih/aasp-judge0). They differ mostly in the supported languages.
 
 ### [Judge0 AASP](https://github.com/chongyih/aasp-judge0)
+
 <details><summary>Click here to expand the list</summary>
 <table>
 <thead>
@@ -98,18 +103,14 @@ Judge0 comes in three flavors: [Judge0](https://rapidapi.com/hermanzdosilovic/ap
 </tr>
 <tr>
 <td style="text-align:center">19</td>
-<td style="text-align:center">R (4.0.0)</td>
-</tr>
-<tr>
-<td style="text-align:center">20</td>
 <td style="text-align:center">Ruby (2.7.0)</td>
 </tr>
 <tr>
-<td style="text-align:center">21</td>
+<td style="text-align:center">20</td>
 <td style="text-align:center">SQL (SQLite 3.27.2)</td>
 </tr>
 <tr>
-<td style="text-align:center">22</td>
+<td style="text-align:center">21</td>
 <td style="text-align:center">TypeScript (3.7.4)</td>
 </tr>
 <tr>
@@ -121,6 +122,7 @@ Judge0 comes in three flavors: [Judge0](https://rapidapi.com/hermanzdosilovic/ap
 </details>
 
 ### [Judge0](https://rapidapi.com/hermanzdosilovic/api/judge0/pricing)
+
 <details><summary>Click here to expand the list</summary>
 <table>
 <thead>
@@ -319,6 +321,7 @@ Judge0 comes in three flavors: [Judge0](https://rapidapi.com/hermanzdosilovic/ap
 </details>
 
 ### [Judge0 Extra](https://rapidapi.com/hermanzdosilovic/api/judge0-extra/pricing)
+
 <details><summary>Click here to expand the list</summary>
 <table>
 <thead>
@@ -413,13 +416,15 @@ Judge0 comes in three flavors: [Judge0](https://rapidapi.com/hermanzdosilovic/ap
 </details>
 
 ## Sandbox
+
 For sandbox we are using [Isolate](https://github.com/ioi/isolate) (licensed under [GPL v2](https://github.com/ioi/isolate/blob/master/LICENSE)).
 
->Isolate is a sandbox built to safely run untrusted executables, offering them a limited-access environment and preventing them from affecting the host system. It takes advantage of features specific to the Linux kernel, like namespaces and control groups.
+> Isolate is a sandbox built to safely run untrusted executables, offering them a limited-access environment and preventing them from affecting the host system. It takes advantage of features specific to the Linux kernel, like namespaces and control groups.
 
 Huge thanks to [Martin Mareš](https://github.com/gollux) and [Bernard Blackham](https://github.com/bblackham) for developing and maintaining Isolate. Thanks to all [contributors](https://github.com/ioi/isolate/graphs/contributors) for their contributions to Isolate project.
 
 Isolate was used as a sandbox environment (part of [CMS](https://github.com/cms-dev/cms) system) on big programming contests like [International Olympiad in Informatics](http://www.ioinformatics.org/index.shtml) (a.k.a. IOI) in 2012, and we trust that it works and does its job.
 
 ## Donate
+
 Your are more than welcome to support Judge0 development on [Patreon](https://www.patreon.com/hermanzdosilovic), via [PayPal](https://paypal.me/hermanzdosilovic) or [Revolut](https://pay.revolut.com/profile/hermancy5).
