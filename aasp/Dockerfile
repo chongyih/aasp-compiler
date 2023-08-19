@@ -1,28 +1,6 @@
 # Check for latest version here: https://hub.docker.com/_/buildpack-deps?tab=tags&page=1&name=buster&ordering=last_updated
 # This is just a snapshot of buildpack-deps:buster that was last updated on 2019-12-28.
 FROM judge0/buildpack-deps:buster-2019-12-28
-
-# Check for latest version here: https://github.com/steveicarus/iverilog/releases
-ENV IVERILOG_VERSIONS \
-      v11-branch
-RUN apt-get -y update && \
-    apt-get install -y \
-    automake \
-    autoconf \
-    gperf \
-    build-essential \
-    flex \
-    bison \
-    git && \
-    rm -rf /var/lib/apt/lists/*
-RUN git clone --branch=${IVERILOG_VERSIONS} https://github.com/steveicarus/iverilog && \
-    cd iverilog && \
-    bash autoconf.sh && \
-    ./configure && \
-    make && \
-    make install && \
-    cd && \
-    rm -rf iverilog
  
 # Check for latest version here: https://www.ruby-lang.org/en/downloads
 ENV RUBY_VERSIONS \
@@ -109,6 +87,40 @@ RUN set -xe && \
       make -j$(nproc) install && \
       rm -rf /tmp/*; \
     done
+
+# Check for latest version here: https://github.com/steveicarus/iverilog/releases
+ENV IVERILOG_VERSIONS \
+      v11-branch
+RUN apt-get -y update && \
+    apt-get install -y \
+    automake \
+    autoconf \
+    gperf \
+    build-essential \
+    flex \
+    bison \
+    git && \
+    rm -rf /var/lib/apt/lists/*
+RUN git clone --branch=${IVERILOG_VERSIONS} https://github.com/steveicarus/iverilog && \
+    cd iverilog && \
+    bash autoconf.sh && \
+    ./configure && \
+    make && \
+    make install && \
+    cd && \
+    rm -rf iverilog
+    
+# Check for latest version here: https://github.com/Toroid-io/vcd2wavedrom/releases
+RUN apt-get -y update && \
+  apt-get install -y \
+  python3-pip && \
+  pip3 install --upgrade pip
+
+RUN git clone https://github.com/Toroid-io/vcd2wavedrom && \
+  cd vcd2wavedrom && \
+  pip3 install .
+
+RUN apt-get purge -y python3-pip && apt-get autoremove -y && rm -rf /var/lib/apt/lists/* /root/.cache
 
 # Check for latest version here: https://jdk.java.net
 RUN set -xe && \
