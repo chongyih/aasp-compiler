@@ -107,18 +107,20 @@ RUN git clone --branch=${IVERILOG_VERSIONS} https://github.com/steveicarus/iveri
     ./configure && \
     make && \
     make install && \
-    cd && \
+    cd .. && \
     rm -rf iverilog
     
-# Check for latest version here: https://github.com/Toroid-io/vcd2wavedrom/releases
+# Check for latest version here: https://github.com/chongyih/vcd2wavedrom
 RUN apt-get -y update && \
   apt-get install -y \
   python3-pip && \
   pip3 install --upgrade pip
 
-RUN git clone https://github.com/Toroid-io/vcd2wavedrom && \
+RUN git clone https://github.com/chongyih/vcd2wavedrom && \
   cd vcd2wavedrom && \
-  pip3 install .
+  pip3 install . && \
+  cd .. && \
+  rm -rf vcd2wavedrom
 
 RUN apt-get purge -y python3-pip && apt-get autoremove -y && rm -rf /var/lib/apt/lists/* /root/.cache
 
